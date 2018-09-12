@@ -16,6 +16,7 @@ export interface CollapseProps {
   className?: string;
   bordered?: boolean;
   prefixCls?: string;
+  arrowIcon?: string;
 }
 
 export default class Collapse extends React.Component<CollapseProps, any> {
@@ -29,7 +30,7 @@ export default class Collapse extends React.Component<CollapseProps, any> {
 
   renderExpandIcon = () => {
     return (
-      <Icon type="right" className={`arrow`} />
+      <Icon type={this.props.arrowIcon || 'right'} className={`arrow`} />
     );
   }
 
